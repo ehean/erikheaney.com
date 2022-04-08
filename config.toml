@@ -10,18 +10,15 @@ pygmentsstyle = "bw"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-# disqusShortname = "yourdiscussshortname"
-
 [params]
   author = "Erik Heaney"
   info = "DevOps Engineer"
   description = "Erik Heaney's personal website"
   keywords = "blog,developer,personal"
-  avatarurl = "images/avatar.jpg"
-  #gravatar = "john.doe@example.com"
+  avatarurl = "erik-circle-avatar.png"
 
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+  favicon_32 = "icons8-idea-32.ico"
+  favicon_16 = "icons8-idea-16.ico"
 
   since = 2022
 
@@ -46,16 +43,16 @@ pygmentscodefencesguesssyntax = true
   icon = "fa fa-github fa-2x"
   weight = 1
   url = "https://github.com/ehean/"
-# [[params.social]]
-#   name = "Gitlab"
-#   icon = "fa fa-gitlab fa-2x"
-#   weight = 2
-#   url = "https://gitlab.com/johndoe/"
-# [[params.social]]
-#   name = "Twitter"
-#   icon = "fa fa-twitter fa-2x"
-#   weight = 3
-#   url = "https://twitter.com/johndoe/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 2
+  url = "https://linkedin.com/in/erik-heaney"
+[[params.social]]
+  name = "Email"
+  icon = "fa fa-envelope fa-2x"
+  weight = 3
+  url = "mailto:eheaney98@gmail.com"
 
 # Menu links
 [[menu.main]]
