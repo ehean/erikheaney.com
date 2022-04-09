@@ -1,4 +1,4 @@
-baseurl = "http://www.example.com"
+baseurl = "https://www.erikheaney.com"
 title = "Erik Heaney"
 theme = "hugo-coder"
 languagecode = "en"
@@ -63,3 +63,7 @@ pygmentscodefencesguesssyntax = true
   name = "About"
   weight = 2
   url = "about/"
+
+[params.plausibleAnalytics]
+  domain = "erikheaney.com"
+  serverURL = "erikheaney.com"
