@@ -9,6 +9,7 @@ apt install zabbix-agent
 apt install nginx
 apt install tor
 apt install git
+apt install gpg
 
 # Install Go for Hugo
 mkdir build
@@ -40,15 +41,6 @@ echo "server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
 	}
-
-    # SSL support. Key generated from LetsEncrypt. Managed by certbot.
-    listen [::]:443 ssl ipv6only=on; # managed by Certbot
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/erikheaney.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/erikheaney.com/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 
         # Proxy requests from the plausible script contained in the site header to plausible agent
         location /js/plausible.js {
@@ -91,27 +83,9 @@ echo "server {
               sub_filter_once off;
         }
 
-}
-
-server {
-    if ($host = www.erikheaney.com) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-    if ($host = erikheaney.com) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-	listen 80 default_server;
-	listen [::]:80 default_server;
-
-	server_name www.erikheaney.com;
-    return 404; # managed by Certbot
-}" >> /etc/nginx/sites-enabled/erikheaney
+}" > /etc/nginx/sites-enabled/erikheaney
 sudo ln -s /etc/nginx/sites-available/erikheaney /etc/nginx/sites-enabled/erikheaney
-
+rm /etc/nginx/sites-available/default
 
 # Install certbot, EFF's SSL cert manager. It uses the Let's Encrypt CA.
 apt install certbot
