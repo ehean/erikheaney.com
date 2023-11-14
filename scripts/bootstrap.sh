@@ -1,5 +1,10 @@
 #!/bin/sh
 
+ADMIN_USER_EMAIL=$1
+ADMIN_USER_NAME=$2
+ADMIN_USER_PWD=$3
+SECRET_KEY_BASE=$4
+
 # Install ufw (firewall), zabbix (resource monitoring), nginx (reverse-proxy), tor (privacy tool)
 apt upgrade
 apt update
@@ -134,11 +139,11 @@ docker-compose --version
 cd /var/www/
 git clone https://github.com/plausible/hosting
 cd hosting
-echo "ADMIN_USER_EMAIL=\"eheaney98@gmail.com\"
-ADMIN_USER_NAME=\"Erik Heaney\"
-ADMIN_USER_PWD=replace-me
+echo "ADMIN_USER_EMAIL=$ADMIN_USER_EMAIL
+ADMIN_USER_NAME=$ADMIN_USER_NAME
+ADMIN_USER_PWD=$ADMIN_USER_PWD
 BASE_URL=\"https://erikheaney.com\"
-SECRET_KEY_BASE=\"GSgVrUksU6H2/LnoyL3zPk2RAyTXdEDSnEmt0dzW+Pg5Rv+oqkmne2ehzd0jVgYjWwzhHgi9lVlegOWZIq9byg==\"" >> plausible-conf.env 
+SECRET_KEY_BASE=$SECRET_KEY_BASE" >> plausible-conf.env 
 docker-compose up -d
 
 # Setup ufw 
