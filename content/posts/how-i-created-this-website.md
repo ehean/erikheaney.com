@@ -9,6 +9,7 @@ draft: true
 Here is the total cost of maintaining this website:
 * Hosting: $5/month on Akamai's Linode
 * Domain Name: $20/year on Squarespace
+* Total cost: $80/year
 
 Here is a list of free tools I use:
 * Front-end framework: Hugo
@@ -45,9 +46,26 @@ On top of that, you will always be limited. You are on their platform, and are c
 ### Fun
 It's more fun to build your own site! I felt a great sense of accomplishment when I got my website up and running, and I continue to feel that sense of accomplishment whenever I add something new. It's a great way to learn basic front-end software skills. As someone who works totally on backend infrastructure, I find this work to be refreshing. It's great to see something I can show friends and family that has my name on it and I can say I built and own. 
 
-## Hosting
+## Steps to building your own site
+### Hosting
+I chose Linode (which is now owned by Akamai) for its simplicty and price. Create an account, add your billing info, and you can spin up a very reliable and performant linux server with a public IP in a few seconds for $5/month. I don't need all the features and layers that AWS, GCP, or Azure provides. If you are building something more complex, then by all means use those platforms. But sometimes simpler is better. 
+
+### Domain Name
+I originally bought the domain name off of Google, but they no register domain names and point you to Squarespace. It used to be $12 a year on Google, and Squarespace now charges $20. If there's a better option, let me know. But it's super cool to have your name be your domain name. If you work in IT, it let's your website serve as a portfolio.
+
+### Web Framework
+There are all sorts of frontend frameworks and languages now - Angular, Ruby on Rails, PHP, etc. I am not a full-stack or frontend developer, so I can't tell you the pros and cons of each one. That's why I went with Hugo. Again, simplicity was the main motivator - it allowed me to build a blogging wite with as little frontend experience as possible while still giving me the control and flexibility I wanted. It's a static website generator, so instead of layers of javascript that builds the site with each client request, it simply builds the site when I update the content. I write a new blog post, I run hugo -D, and that's it. Also, since it's a static website, that means my website is very fast. And while it's not the most popular web framework, it's popular enough that you can find many themes that more experienced frontend developers have created on GitHub. I use this hugo-coder theme, a simple blogging theme created by luizdepra. 
+
+### Firewall
 
 
-## Domain Name
+### Reverse Proxy
 
-## 
+
+### Managing SSL Certificates
+
+
+### Web Analytics
+
+
+### Startup Script

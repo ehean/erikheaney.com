@@ -37,7 +37,7 @@ az login
 {{< /highlight >}}
 
 This will open a window in your web browser like below:
-<!-- {{< figure src="/posts/how-to-setup-terraform-for-azure/azure-login.png" align="center" style="border-radius: 8px;" >}} -->
+{{< figure src="/posts/how-to-setup-terraform-for-azure/azure-login.png" align="center" style="border-radius: 8px;" >}}
 
 Select your account and you should be logged in. You will see an output like this:
 {{< highlight output >}}
